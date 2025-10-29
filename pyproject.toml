@@ -1,0 +1,16 @@
+[tool.ruff]
+# Những luật nên bật cho code Python app/UI
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+#   E/W: PEP8; F: lỗi flake8; I: sắp xếp import; UP: pyupgrade; B: bugbear; SIM: simplify
+ignore = []
+line-length = 120
+target-version = "py310"
+fix = true
+unsafe-fixes = true  # cho phép sửa các lỗi kiểu E701: nhiều câu lệnh trên 1 dòng
+
+# Loại trừ thư mục ảo
+exclude = [".venv", "venv", "env", "__pycache__", ".ruff_cache"]
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
